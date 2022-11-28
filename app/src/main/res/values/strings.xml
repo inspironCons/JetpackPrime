@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Jetpack Prime</string>
+    <string name="welcome_on_board">Million of movies,Tv shows and people to discover. Explore now</string>
+    <string name="enter_now">Enter Now</string>
 </resources>

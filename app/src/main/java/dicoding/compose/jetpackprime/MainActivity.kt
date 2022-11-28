@@ -10,39 +10,15 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import dicoding.compose.jetpackprime.ui.theme.JetpackPrimeTheme
+import dicoding.compose.jetpackprime.presentation.theme.JetpackPrimeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackPrimeTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.surface
-                ) {
-                    Greeting("Android")
-                }
+
             }
-        }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview()
-@Composable
-fun DefaultPreview() {
-    JetpackPrimeTheme {
-        Surface(
-            modifier = Modifier.fillMaxSize(),
-            color = MaterialTheme.colors.surface
-        ) {
-            Greeting("Android")
         }
     }
 }

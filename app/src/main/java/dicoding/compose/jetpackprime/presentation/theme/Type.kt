@@ -1,4 +1,4 @@
-package dicoding.compose.jetpackprime.ui.theme
+package dicoding.compose.jetpackprime.presentation.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
@@ -19,9 +19,40 @@ val NotoSand = FontFamily(
 )
 // Set of Material typography styles to start with
 val Typography = Typography(
+    h5 = TextStyle(
+        fontFamily = NotoSand,
+        fontWeight = FontWeight.ExtraBold,
+        fontSize = 20.sp,
+        color = textColorOne
+    ),
+    subtitle1 = TextStyle(
+        fontFamily = NotoSand,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 18.sp,
+        color = textColorOne
+    ),
     body1 = TextStyle(
         fontFamily = NotoSand,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
+        fontSize = 16.sp,
+        color = textColorOne
     ),
+    body2 = TextStyle(
+        fontFamily = NotoSand,
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp,
+        color = textColorTwo
+    ),
+    caption = TextStyle(
+        fontFamily = NotoSand,
+        fontWeight = FontWeight.Light,
+        color = textColorTwo,
+        fontSize = 12.sp
+    ),
+    button = TextStyle(
+        fontFamily = NotoSand,
+        fontWeight = FontWeight.Bold,
+        color = textColorOne,
+    )
 )
+

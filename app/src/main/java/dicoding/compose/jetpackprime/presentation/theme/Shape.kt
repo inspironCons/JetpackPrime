@@ -1,4 +1,4 @@
-package dicoding.compose.jetpackprime.ui.theme
+package dicoding.compose.jetpackprime.presentation.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
@@ -9,3 +9,5 @@ val Shapes = Shapes(
     medium = RoundedCornerShape(4.dp),
     large = RoundedCornerShape(0.dp)
 )
+
+val CardShape = RoundedCornerShape(25.dp)

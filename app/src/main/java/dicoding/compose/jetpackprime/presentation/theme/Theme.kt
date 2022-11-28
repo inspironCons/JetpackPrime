@@ -1,4 +1,4 @@
-package dicoding.compose.jetpackprime.ui.theme
+package dicoding.compose.jetpackprime.presentation.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
