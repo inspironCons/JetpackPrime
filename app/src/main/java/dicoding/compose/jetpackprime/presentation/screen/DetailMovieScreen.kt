@@ -9,9 +9,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
@@ -27,9 +24,7 @@ import dicoding.compose.jetpackprime.presentation.component.ActorCard
 import dicoding.compose.jetpackprime.presentation.component.Text
 import dicoding.compose.jetpackprime.presentation.component.TextType
 import dicoding.compose.jetpackprime.presentation.theme.JetpackPrimeTheme
-import java.lang.Math.*
-import kotlin.math.pow
-import kotlin.math.sqrt
+import dicoding.compose.jetpackprime.util.gradientBackground
 
 @Composable
 fun DetailMovieScreen(){
@@ -127,7 +122,6 @@ fun ListActor(
     LazyHorizontalGrid(
         rows = GridCells.Fixed(2),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
-        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
         modifier = modifier.height(150.dp)
     ){
         items(casts, key = {it.id}){element->
@@ -151,28 +145,3 @@ private fun ListActorPreview() {
         )
     )
 }
-
-private fun Modifier.gradientBackground(colors: List<Color>, angle: Float) = this.then(
-    Modifier.drawBehind {
-        val angleRad = angle / 180f * PI
-        val x = kotlin.math.cos(angleRad).toFloat() //Fractional x
-        val y = kotlin.math.sin(angleRad).toFloat() //Fractional y
-
-        val radius = sqrt(size.width.pow(2) + size.height.pow(2)) / 2f
-        val offset = center + Offset(x * radius, y * radius)
-
-        val exactOffset = Offset(
-            x = offset.x.coerceAtLeast(0f).coerceAtMost(size.width),
-            y = size.height - offset.y.coerceAtLeast(0f).coerceAtMost(size.height)
-        )
-
-        drawRect(
-            brush = Brush.linearGradient(
-                colors = colors,
-                start = Offset(size.width, size.height) - exactOffset,
-                end = exactOffset
-            ),
-            size = size
-        )
-    }
-)

@@ -12,7 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dicoding.compose.jetpackprime.model.Cast
-import dicoding.compose.jetpackprime.presentation.theme.CardShape
+import dicoding.compose.jetpackprime.presentation.theme.PrimeShape
 import dicoding.compose.jetpackprime.presentation.theme.DavyGrey
 import dicoding.compose.jetpackprime.presentation.theme.JetpackPrimeTheme
 
@@ -31,7 +31,7 @@ fun ActorCard(
                 .height(50.dp)
                 .align(Alignment.CenterStart),
             border = BorderStroke(width = 1.dp, color = DavyGrey),
-            shape = CardShape,
+            shape = PrimeShape,
             elevation = 4.dp
         ) {
             Column(

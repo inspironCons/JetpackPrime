@@ -10,4 +10,4 @@ val Shapes = Shapes(
     large = RoundedCornerShape(0.dp)
 )
 
-val CardShape = RoundedCornerShape(25.dp)
+val PrimeShape = RoundedCornerShape(25.dp)
