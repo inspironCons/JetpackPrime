@@ -13,8 +13,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dicoding.compose.jetpackprime.R
-import dicoding.compose.jetpackprime.presentation.screen.home.SearchBarState
-import dicoding.compose.jetpackprime.presentation.screen.home.rememberSearchState
 import dicoding.compose.jetpackprime.presentation.theme.JetpackPrimeTheme
 import dicoding.compose.jetpackprime.presentation.theme.PrimeShape
 

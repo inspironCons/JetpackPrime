@@ -23,7 +23,7 @@ class FavoriteRepositoryImpl @Inject constructor():IFavoriteRepository {
     override fun removeFavorite(id:Int): Flow<Result<Boolean>>  = flow {
         try {
             val temp = mutableListOf<Movies>()
-            val filter = data.filter { it.id == id }
+            val filter = data.filter { it.id != id }
             temp.addAll(filter)
             data.clear()
             data.addAll(temp)

@@ -4,7 +4,7 @@ import androidx.compose.ui.graphics.Color
 import dicoding.compose.jetpackprime.BuildConfig
 import dicoding.compose.jetpackprime.model.Movies
 
-object General {
+object  General {
     private val randomColor = listOf(
         listOf(Color(0xFFFF2E2E), Color(0xFFE08939)),
         listOf(Color(0xFF004D40), Color(0xFF009688)),

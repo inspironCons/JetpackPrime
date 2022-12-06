@@ -7,4 +7,12 @@ data class Movie(
     val overview:String,
     val year:String,
     var cast:List<Cast> = arrayListOf()
-)
+){
+    fun toMovies() = Movies(
+        id = id,
+        image = poster,
+        year = year,
+        number = 0,
+        title = title
+    )
+}

@@ -4,10 +4,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import dicoding.compose.jetpackprime.domain.use_case.DetailMovieUseCaseImpl
-import dicoding.compose.jetpackprime.domain.use_case.HomeUseCaseImpl
-import dicoding.compose.jetpackprime.domain.use_case.IDetailMovieUseCase
-import dicoding.compose.jetpackprime.domain.use_case.IHomeUseCase
+import dicoding.compose.jetpackprime.domain.use_case.*
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -17,4 +14,7 @@ abstract class UseCaseModule {
 
     @Binds
     abstract fun provideDetailMovieUseCase(useCaseImpl: DetailMovieUseCaseImpl):IDetailMovieUseCase
+
+    @Binds
+    abstract fun provideProfileUseCase(useCaseImpl: ProfileUseCaseImpl):IProfileUseCase
 }

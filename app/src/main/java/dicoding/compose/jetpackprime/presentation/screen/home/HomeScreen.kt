@@ -16,15 +16,6 @@ import dicoding.compose.jetpackprime.R
 import dicoding.compose.jetpackprime.model.Movies
 import dicoding.compose.jetpackprime.presentation.component.*
 
-class SearchBarState(initialValue: String) {
-    var search by mutableStateOf(initialValue)
-}
-
-@Composable
-fun rememberSearchState(input: String): SearchBarState = remember(input) {
-    SearchBarState(input)
-}
-
 @Composable
 fun HomeScreen(
     viewModel: HomeViewModel,

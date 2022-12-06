@@ -17,6 +17,7 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -33,6 +34,7 @@ import dicoding.compose.jetpackprime.model.Movie
 import dicoding.compose.jetpackprime.presentation.component.ActorCard
 import dicoding.compose.jetpackprime.presentation.component.Text
 import dicoding.compose.jetpackprime.presentation.component.TextType
+import dicoding.compose.jetpackprime.presentation.theme.DustyPink
 import dicoding.compose.jetpackprime.presentation.theme.JetpackPrimeTheme
 import dicoding.compose.jetpackprime.util.gradientBackground
 
@@ -44,7 +46,10 @@ fun DetailMovieScreen(
 ) {
     LaunchedEffect(Unit) {
         viewModel.getDetail(idMovie)
+        viewModel.isFavorite(idMovie)
     }
+
+    val tintState by viewModel.tintState
 
     viewModel.movieState.collectAsState().value.let { state ->
         when (state) {
@@ -90,13 +95,14 @@ fun DetailMovieScreen(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         IconButton(
-                            onClick = onBackPress,
-
+                            onClick = {
+                                viewModel.actionFavorite(idMovie = idMovie)
+                            },
                         ) {
                             Icon(
                                 imageVector = Icons.Filled.Favorite,
                                 contentDescription = "favorite",
-                                tint = Color.Black,
+                                tint = tintState,
                                 modifier = Modifier.size(25.dp)
                             )
                         }
