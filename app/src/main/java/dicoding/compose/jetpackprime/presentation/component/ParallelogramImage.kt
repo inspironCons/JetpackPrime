@@ -20,7 +20,7 @@ fun ParallelogramImage(
 ){
     Box(
         modifier = modifier
-            .height(200.dp)
+            .height(170.dp)
             .clip(
                 GenericShape { size, _ ->
                     val radian = 73 * Math.PI / 165
@@ -47,15 +47,15 @@ fun ParallelogramImages(
     modifier: Modifier = Modifier,
     images:List<Int>
 ){
-    Column(modifier = modifier) {
+    Box(modifier = modifier) {
         images.mapIndexed{ i, image ->
             if(i == 0){
                 ParallelogramImage( image = image)
             }else{
-                val y = (-56 * i).dp
+                val y = (110 * i).dp
                 ParallelogramImage(
                     image = image,
-                    modifier = Modifier.offset(0.dp,y)
+                    modifier = Modifier.padding(top = y)
                 )
             }
         }

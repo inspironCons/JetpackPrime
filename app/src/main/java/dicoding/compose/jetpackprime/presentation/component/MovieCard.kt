@@ -22,12 +22,13 @@ import dicoding.compose.jetpackprime.util.General.generateColor
 import dicoding.compose.jetpackprime.util.gradientBackground
 
 @Composable
-fun MovieCard(
-    data:Movies
+fun TrendingMovieCard(
+    data:Movies,
+    modifier: Modifier = Modifier
 ) {
-    Box(modifier = Modifier
+    Box(modifier = modifier
         .fillMaxWidth()
-        .height(200.dp)) {
+        .height(150.dp)) {
         CardContent(
             modifier = Modifier.align(Alignment.BottomCenter),
             title=data.title,
@@ -37,7 +38,7 @@ fun MovieCard(
             model = data.image,
             contentDescription = null,
             modifier = Modifier
-                .height(150.dp)
+                .height(140.dp)
                 .width(100.dp)
                 .padding(top = 8.dp, start = 4.dp)
                 .clip(PrimeShape)
@@ -45,7 +46,7 @@ fun MovieCard(
             contentScale = ContentScale.Fit
         )
         Text(text = data.number.toString(),
-            style = MaterialTheme.typography.h5.copy(fontSize = 100.sp),
+            style = MaterialTheme.typography.h5.copy(fontSize = 60.sp),
             modifier = Modifier
                 .align(Alignment.TopEnd)
                 .padding(end = 24.dp),
@@ -71,7 +72,7 @@ fun CardContent(
                 ambientColor = DefaultShadowColor
             )
             .padding(2.dp)
-            .height(100.dp)
+            .height(80.dp)
             .clip(PrimeShape)
             .gradientBackground(
                 colors = generateColor(),
@@ -93,7 +94,49 @@ fun CardContent(
 
 @Preview
 @Composable
-fun MovieCardPreview() {
+fun TrendingMovieCardPreview() {
+    JetpackPrimeTheme {
+        TrendingMovieCard(
+            Movies(
+                image  = "https://image.tmdb.org/t/p/w500/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg",
+                number = 1,
+                title = "Black Adam",
+                year = "2022",
+                id = 1
+            )
+        )
+    }
+}
+
+@Composable
+fun MovieCard(
+    data:Movies,
+    modifier: Modifier = Modifier
+){
+    Column(
+        modifier = modifier.padding(4.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        AsyncImage(
+            model = data.image,
+            contentDescription = null,
+            modifier = Modifier
+                .size(120.dp)
+                .clip(PrimeShape),
+            contentScale = ContentScale.Crop
+        )
+        Text(text = data.title, textAlign = TextAlign.Center, style = MaterialTheme.typography.h5.copy(
+            fontSize = 14.sp,
+        ))
+        Text(text = data.year, style = MaterialTheme.typography.caption.copy(
+            fontSize = 12.sp
+        ))
+    }
+}
+
+@Preview
+@Composable
+fun MovieCardPreview(){
     JetpackPrimeTheme {
         MovieCard(
             Movies(

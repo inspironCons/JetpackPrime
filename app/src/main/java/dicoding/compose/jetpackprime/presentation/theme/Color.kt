@@ -12,3 +12,4 @@ val textColorOne = Color(0xFFFFFFFF)
 val textColorTwo = Color(0xFF8F8F8F)
 
 val DavyGrey = Color(0xFF5E5E5E)
+val W100 = Color(0xFFFFFFFF)

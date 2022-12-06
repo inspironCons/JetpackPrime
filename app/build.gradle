@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
@@ -50,18 +51,34 @@ android {
 
 dependencies {
 
+    //core, material,compose
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
     implementation 'androidx.activity:activity-compose:1.6.1'
     implementation "androidx.compose.ui:ui:$compose_ui_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
     implementation 'androidx.compose.material:material:1.3.1'
+    implementation "androidx.navigation:navigation-compose:2.5.3"
+    implementation "com.google.accompanist:accompanist-systemuicontroller:0.28.0"
+
+    //image processing
     implementation 'io.coil-kt:coil-compose:2.2.2'
+
+    //hilt
     implementation "com.google.dagger:hilt-android:2.44"
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
-    implementation "androidx.navigation:navigation-compose:2.5.3"
     kapt "com.google.dagger:hilt-compiler:2.44"
+
+    //network
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
+
+    //flipper
+    implementation 'com.facebook.flipper:flipper:0.140.0'
+    implementation 'com.facebook.soloader:soloader:0.10.3'
+    implementation 'com.facebook.flipper:flipper-network-plugin:0.119.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
