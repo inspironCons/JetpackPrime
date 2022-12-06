@@ -1,6 +1,5 @@
 package dicoding.compose.jetpackprime.presentation.component
 
-import android.service.autofill.OnClickAction
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme

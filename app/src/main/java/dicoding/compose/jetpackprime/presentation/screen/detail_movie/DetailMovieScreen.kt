@@ -34,7 +34,6 @@ import dicoding.compose.jetpackprime.model.Movie
 import dicoding.compose.jetpackprime.presentation.component.ActorCard
 import dicoding.compose.jetpackprime.presentation.component.Text
 import dicoding.compose.jetpackprime.presentation.component.TextType
-import dicoding.compose.jetpackprime.presentation.theme.DustyPink
 import dicoding.compose.jetpackprime.presentation.theme.JetpackPrimeTheme
 import dicoding.compose.jetpackprime.util.gradientBackground
 

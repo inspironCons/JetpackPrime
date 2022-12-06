@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Jetpack Prime</string>
     <string name="welcome_on_board">Million of movies,Tv shows and people to discover. Explore now</string>
-    <string name="enter_now">Enter Now</string>
     <string name="search_movie_title">Search for a movie do you wan\'t</string>
     <string name="search_movie">Search for a movie</string>
     <string name="top_movies">Trending movies on this week</string>

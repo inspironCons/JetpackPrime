@@ -5,12 +5,10 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import dicoding.compose.jetpackprime.presentation.theme.JetpackPrimeTheme
-import kotlin.math.max
 import androidx.compose.material.Text as MText
 
 enum class TextType {

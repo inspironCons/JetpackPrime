@@ -12,7 +12,6 @@ import dicoding.compose.jetpackprime.presentation.theme.DustyPink
 import dicoding.compose.jetpackprime.presentation.theme.W100
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 import javax.inject.Inject
