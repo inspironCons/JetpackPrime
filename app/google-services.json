@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "280858991661",
+    "project_id": "jetpackprime-11658",
+    "storage_bucket": "jetpackprime-11658.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280858991661:android:a6ebbb961d3c605533aca4",
+        "android_client_info": {
+          "package_name": "dicoding.compose.jetpackprime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "280858991661-hmbj5sp25uvjg2i56ohs363vqsthjd9k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dicoding.compose.jetpackprime",
+            "certificate_hash": "7e2b50ffbb979a5cc05405c292084f56ebf3296b"
+          }
+        },
+        {
+          "client_id": "280858991661-p9asi7n2d80iod4lfvmf9vg5jb75hch6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA_fGoBDOH8CLz-ErWu5Q8k1fF60cfiEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "280858991661-p9asi7n2d80iod4lfvmf9vg5jb75hch6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
