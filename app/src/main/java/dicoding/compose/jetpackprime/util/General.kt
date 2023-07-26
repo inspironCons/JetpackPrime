@@ -25,7 +25,6 @@ object  General {
 
     const val BASE_URL = BuildConfig.baseUrl
     const val IMAGE_URL = BuildConfig.imageUrl
-    const val API_KEY = BuildConfig.apiKey
     const val LANGUAGE = "en-EN"
     const val REGION = "ID"
 

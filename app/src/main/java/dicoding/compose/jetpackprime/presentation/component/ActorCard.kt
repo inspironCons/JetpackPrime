@@ -39,7 +39,7 @@ fun ActorCard(
                 verticalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = cast.cast,
+                    text = cast.name,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.h5.copy(

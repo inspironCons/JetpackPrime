@@ -6,6 +6,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import dicoding.compose.jetpackprime.BuildConfig
 import dicoding.compose.jetpackprime.data.remote.network.MovieApi
 import dicoding.compose.jetpackprime.data.remote.network.SearchApi
 import dicoding.compose.jetpackprime.data.remote.network.TrendingApi
@@ -21,6 +22,26 @@ object NetworkModule {
 
     private val client = OkHttpClient.Builder()
         .addNetworkInterceptor(FlipperOkhttpInterceptor(flipperPlugin))
+        .addNetworkInterceptor {chain->
+            val original = chain.request()
+
+            val originalAuthToken = original.header("Authorization")
+            if (originalAuthToken.isNullOrEmpty()) {
+                val requestBuilder = original.newBuilder()
+                    .header(
+                        "Authorization",
+                        "Bearer ${BuildConfig.apiKey}"
+                    ).header(
+                        "App-Version",
+                        BuildConfig.VERSION_NAME
+                    )
+                val request = requestBuilder.build()
+
+                chain.proceed(request)
+            } else {
+                chain.proceed(original)
+            }
+        }
         .build()
 
     @Provides
