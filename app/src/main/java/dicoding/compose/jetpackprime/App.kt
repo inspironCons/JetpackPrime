@@ -12,23 +12,23 @@ import javax.inject.Inject
 
 @HiltAndroidApp
 class App:Application(){
-    @Inject
-    lateinit var networkFlipperPlugin: NetworkFlipperPlugin
+//    @Inject
+//    lateinit var networkFlipperPlugin: NetworkFlipperPlugin
 
     override fun onCreate() {
         super.onCreate()
 
-        if (BuildConfig.DEBUG) {
-            //#issue flipper ketika menjalankan instrument testing agar di komen
-            SoLoader.init(this, false)
-
-            if(FlipperUtils.shouldEnableFlipper(this)){
-                val client = AndroidFlipperClient.getInstance(this)
-                client.addPlugin(InspectorFlipperPlugin(this, DescriptorMapping.withDefaults()))
-                client.addPlugin(networkFlipperPlugin)
-                client.start()
-            }
-
-        }
+//        if (BuildConfig.DEBUG) {
+//            //#issue flipper ketika menjalankan instrument testing agar di komen
+//            SoLoader.init(this, false)
+//
+//            if(FlipperUtils.shouldEnableFlipper(this)){
+//                val client = AndroidFlipperClient.getInstance(this)
+//                client.addPlugin(InspectorFlipperPlugin(this, DescriptorMapping.withDefaults()))
+//                client.addPlugin(networkFlipperPlugin)
+//                client.start()
+//            }
+//
+//        }
     }
 }
