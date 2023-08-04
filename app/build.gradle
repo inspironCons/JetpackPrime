@@ -8,14 +8,14 @@ plugins {
 
 android {
     namespace 'dicoding.compose.jetpackprime'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "dicoding.compose.jetpackprime"
         minSdk 23
-        targetSdk 33
+        targetSdk 34
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "dicoding.compose.jetpackprime.HiltTestRunner"
         vectorDrawables {
@@ -30,7 +30,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
